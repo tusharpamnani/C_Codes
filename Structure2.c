@@ -1,18 +1,30 @@
 /*
-Structure for employee details
+    Structure for Employee Details
 */
 
 #include <stdio.h>
-struct employee{
+
+// Define a structure to store employee details
+struct employee {
     char name[20];
     int id;
     float salary;
 };
-void display(struct employee *e){
+
+// Function to display employee details
+void display(struct employee *e) {
+    // Display header for the employee details
     printf("\nName\tID\tSalary\n");
-    printf("%s\t%d\t%.2f",e->name,e->id,e->salary);
+
+    // Display employee details
+    printf("%s\t%d\t%.2f", e->name, e->id, e->salary);
 }
-void main(){
-    struct employee emp={"Ram",14,1500000.50};
+
+// Main function
+void main() {
+    // Declare and initialize an employee structure with default values
+    struct employee emp = {"Ram", 14, 1500000.50};
+
+    // Call the display function to show employee details
     display(&emp);
 }
